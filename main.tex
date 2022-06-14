@@ -1,0 +1,213 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{geometry}
+\geometry{a4paper,
+	total={10mm,10mm},
+	left=10mm,
+	top=10mm}
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{adjustbox}
+\usepackage{comment}
+\usepackage{enumitem}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{2pt}{2pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{10mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{1.0\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+	
+	%WATERMARK TEST [**not part of a CV**]---------------
+	%\font\wm=''Baskerville:color=787878'' at 8pt
+	%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+	%{\wm 
+		%	\begin{textblock}{1}(0,0)
+			%		\rotatebox{-90}{\parbox{500mm}{
+					%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+					%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+					%		}
+				%	}
+			%	\end{textblock}
+		%}
+	
+	\pagestyle{empty} % non-numbered pages
+	
+	\font\fb=''[cmr10]'' %for use with \LaTeX command
+	
+	%--------------------TITLE-------------
+	\par{\centering
+		{\Huge Khai Hanh Tang
+		}\bigskip\par}
+	
+	%--------------------SECTIONS----------------------------------
+	
+	%Section: Personal Data
+	\textbf{Email.} tang0404@e.ntu.edu.sg\\
+	\textbf{Mobile.} (+65) 9469 0354
+	\begin{comment}
+		\section{Personal Information}
+		
+		\begin{tabular}{rl}
+			\textsc{Placeof Birth:} & Sadec City, Dong Thap Province, Vietnam \\
+			\textsc{Date of Birth:} & September 16\textsuperscript{th} 1995 \\
+			\textsc{Address:}   & University of Science, VNU-HCM\\
+			& 227 Nguyen Van Cu, Ward 1, District 5, Ho Chi Minh city, Vietnam \\
+			\textsc{Phone:}     & (+84) 905 718 507\\
+			\textsc{email:}     &  \href{mailto:tang0404@e.ntu.edu.sg}{tang0404@e.ntu.edu.sg}
+		\end{tabular}
+	\end{comment}
+	\section{Education}
+	\begin{tabular}{rl}	
+		1/2018 -- Present & \textbf{\textit{PhD} Student in Cryptography} \\
+		& Nanyang Technological University, Singapore   \\
+		\ & \textbf{\textit{Thesis topic:}} \textit{``Design of New Post-Quantum Cryptographic Protocols"}\\
+		
+		\ & \textbf{\textit{Advisors:}} \textit{Assoc. Prof.} Huaxiong Wang, \textit{Prof.} San Ling, \textit{Dr.} Khoa Nguyen.\\
+		\ & \ \\
+		8/2013 -- 11/2017 & \textbf{\textit{B.Sc in Computer Science}} \\ 
+		& \textit{Excellence Program}, Faculty of Information Technology,\\ &University of Science, VNU-HCM.\\
+		\ & \textbf{\textit{GPA:}} 9.05/10 (or 3.75 / 4.00).\\
+		\ & \textbf{Ranked 1st} in class $\sim$ 30 students.
+	\end{tabular}
+	
+	\section{Publication}
+	Khoa Nguyen, \textbf{Hanh Tang}, Huaxiong Wang, Neng Zeng. ``New Code-Based Privacy-Preserving Cryptographic Constructions''. In ASIACRYPT 2019. LNCS, vol. 11922, pp. 25-55. Springer, 2019.
+	
+	\section{Programming Skills}
+	\begin{itemize}[noitemsep]
+		\item \textbf{Programming Languages.} C++ and Java.
+		\item \textbf{Codeforces.} TangHanh (\url{https://codeforces.com/profile/TangHanh})
+		\begin{itemize}
+			\item \textit{Contest rating:} $2114$ (at 3:23 PM, 18-January-2021).
+			\item \textit{Title:} Master.
+		\end{itemize}
+	\end{itemize}
+	
+	\section{Research Experience}
+	\textbf{In Nanyang Technological University}\\
+	\textit{PhD Student}
+	\begin{itemize}
+		\item \textbf{New methods for designing practically efficient zero-knowledge arguments for Boolean circuits.} \begin{itemize}
+			\item Designing a post-quantum zero-knowledge argument of knowledge for proving the knowledge of a secret input which, via a publicly known Boolean circuit, produces the known output.
+			\item Achieving the computation complexity and communication cost which are competitive to the currently known constructions derived from multi-party computation.
+		\end{itemize}
+		\item \textbf{New zero-knowledge argument systems and privacy-preserving constructions for code-based cryptography.}
+		\begin{itemize}
+			\item Developing a new post-quantum code-based commitment scheme.
+			\item Constructing zero-knowledge proofs for inequalities of committed signed fractional numbers.
+		\end{itemize}
+	\end{itemize}
+	
+	\section{Internship}
+	\begin{itemize}
+		\item Information security internship at PayPal Singapore from 18-January to 28-May-2021.
+	\end{itemize}
+	
+	\section{Android Application Development}
+	\begin{itemize}
+		\item \textbf{App name.} Chemistry Tools 
+		
+		\item \textbf{Current status.} Unpublished
+		
+		\item \textbf{Downloads.} 50K+
+	\end{itemize}
+	
+	\section{Teaching Experience}
+	\begin{itemize}
+		\item \textbf{2017.} TA for courses of \textit{Data Structures and Algorithms}, and \textit{Probability and Statistics} in University of Sciences, VNU-HCM, in Ho Chi Minh city, Vietnam.
+		\item \textbf{2018.} Co-coach for \textit{Competitive Programming} for ACM ICPC teams in Nanyang Technological University, Singapore.
+		\item \textbf{2019.} TA for course of \textit{Discrete Mathematics} in Nanyang Technological University, Singapore.
+		\item \textbf{2020.} TA for courses of \textit{Dicrete Mathematics}, \textit{Probability} and \textit{Statistics} in Division of Mathematical Sciences, Nanyang Technological University, Singapore.
+	\end{itemize}
+	
+	\section{Relevant experience}
+	\begin{tabular}{rl}
+		{\sl \textbf{Enrolled Courses}} & Natural Language Processing, Machine Learning,\\ &Computer Vision and Data Mining at University of Sciences,\\ &Ho Chi Minh city, Vietnam.\\
+		{\sl \textbf{Member}} & HCMUS-The Wizards (ACM ICPC team), regional contest 2013,\\
+		& Phuket and Da Nang sites.\\
+		{\sl \textbf{Member}} & HCMUS-Lattis (ACM ICPC team), regional contest 2016,\\
+		& Bangkok and Nha Trang sites. 
+	\end{tabular}
+	
+	
+	% \section{Seminar Attending}
+	% Weekly, intensively reading seminar in \textit{``Computational Number Theory, Graph Theory and Cryptography''} coordinated by \textit{Dr.} Nguyen An Khuong at University of Technology, VNU-HCM.
+	
+	% \section{Related textbooks read}
+	%     \textit{``A computational introduction to number theory and algebra''} by V. Shoup.\\
+	%     \textit{``Introduction to cryptography with coding theory''} by W. Trappe, et al.\\
+	%     \textit{``Expander Families and Cayley Graphs: A Beginner's Guide"} by M. Krebs, et al.\\
+	%     \textit{``A first course in abstract algebra: with applications"} by M. Krebs, et al.\\
+	%     \textit{``Elementary number theory, group theory and Ramanujan graphs"} by G. Davidoff, et al.\\
+	%     \textit{``Zeta functions of graphs: a stroll through the garden"} by A. Terras.\\
+	%     \textit{``Representation theory of finite groups: an introductory approach"} by B. Steinberg.\\
+	%     \textit{``Introduction to Analytic Number Theory"} by T. Apostol.
+	
+	%Section: Scholarships and additional info
+	\section{Scholarships and Certificates}	
+	\begin{tabular}{rl}
+		{\sl \textbf{AcRF Research Scholarship}} & For PhD study from 1/2018-12/2021, \\
+		& School of Physical and Mathematical Sciences, NTU.\\
+	\end{tabular}
+	
+	
+	%Section: Awards
+	
+	\section{Awards}
+	\begin{tabular}{rl}
+		{\sl \textbf{NSUCrypto Diploma}}& 2017, International Students' Olympiad in Cryptography.\\
+		{}& 2018, 2nd Round with Neng Zeng and Hien Chu.\\
+		{}& 2019, 2nd Round with Phuong Pham and Yi Tu.\\
+		{\sl \textbf{2nd Prize}}& ACM ICPC Asia Regional Contest, Nha Trang, December 2016.\\
+		{\sl \textbf{1st Prize}}& ACM ICPC Vietnam National Contest, October 2016.\\
+		{\sl \textbf{Honorable Mention}}& ACM ICPC Asia Regional Contest, Bangkok, November 2016.\\
+		{\sl \textbf{2nd Prize}}& ACM ICPC Vietnam Northern Provincial Contest, October 2016.\\
+		{\sl \textbf{1st Prize}}& ACM ICPC Vietnam Southern Provincial Contest, October 2016.\\
+		{\sl \textbf{3rd Prize}}& Vietnam Olympiad in Informatics Competition\\& for High School Students, January 2012.
+	\end{tabular}
+	
+	\section{Interests and Activities}
+	Swimming, cycling, watching movies, and reading books.
+	%\hfill
+	%%\hspace{1.5cm}
+	
+\end{document}
