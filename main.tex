@@ -7,8 +7,8 @@
 	top=10mm}
 %A Few Useful Packages
 \usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+%\usepackage{fontspec} 					%for loading fonts
+%\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[big]{layaureo} 				%better formatting of the A4 page
@@ -24,16 +24,6 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
-%FONTS
-\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%% modified for Karol Kozioł for ShareLaTeX use
-\setmainfont[
-SmallCapsFont = Fontin-SmallCaps.otf,
-BoldFont = Fontin-Bold.otf,
-ItalicFont = Fontin-Italic.otf
-]
-{Fontin.otf}
 %%%
 
 %CV Sections inspired by: 
@@ -71,9 +61,6 @@ ItalicFont = Fontin-Italic.otf
 		%}
 	
 	\pagestyle{empty} % non-numbered pages
-	
-	\font\fb=''[cmr10]'' %for use with \LaTeX command
-	
 	%--------------------TITLE-------------
 	\par{\centering
 		{\Huge Khai Hanh Tang
@@ -82,7 +69,7 @@ ItalicFont = Fontin-Italic.otf
 	%--------------------SECTIONS----------------------------------
 	
 	%Section: Personal Data
-	\textbf{Email.} tang0404@e.ntu.edu.sg, khaihanhtang@gmail.com\\
+	\textbf{Email.} \url{khaihanh.tang@ntu.edu.sg}, \url{khaihanhtang@gmail.com}\\
 	\textbf{Mobile.} (+65) 9469 0354
 	\begin{comment}
 		\section{Personal Information}
@@ -98,39 +85,41 @@ ItalicFont = Fontin-Italic.otf
 	\end{comment}
 	\section{Education}
 	\begin{tabular}{rl}	
-		1/2018 -- Present & \textbf{\textit{PhD} Student in Cryptography} \\
+		12/2022 -- Present & \textbf{Post-Doctoral Research Follow in Cryptography} \\
 		& Nanyang Technological University, Singapore   \\
-		\ & \textbf{\textit{Thesis title:}} \textit{``New and Improved Zero-Knowledge Argument Systems}\\&\textit{           for Code-Based Cryptopgraphy."}\\
+		\ & \textbf{\textit{Topics of Interests:}} Designing Zero-Knowledge Protocols\\ &and Privacy-Preserving Signatures.\\
+		1/2018 -- 7/2022 & \textbf{\textit{PhD} Student in Cryptography} \\
+		& Nanyang Technological University, Singapore   \\
+		\ & \textbf{\textit{Thesis:}} \textit{``New and Improved Zero-Knowledge Argument Systems}\\&\textit{           for Code-Based Cryptopgraphy."}\\
 		
-		\ & \textbf{\textit{Advisors:}} \textit{Assoc. Prof.} Huaxiong Wang, \textit{Prof.} San Ling, \textit{Dr.} Khoa Nguyen.\\
-		\ & \ \\
+		\ & \textbf{\textit{Advisors:}} \textit{Prof.}\! Huaxiong Wang, \textit{Prof.}\! San Ling, \textit{Dr.}\! Khoa Nguyen.\\
 		8/2013 -- 11/2017 & \textbf{\textit{B.Sc in Computer Science}} \\ 
 		& \textit{Excellence Program}, Faculty of Information Technology,\\ &University of Science, VNU-HCM.\\
 		\ & \textbf{\textit{GPA:}} 9.05/10 (or 3.75 / 4.00).
 	\end{tabular}
 	
 	\section{Publications}
-	Khoa Nguyen, \textbf{Hanh Tang}, Huaxiong Wang, Neng Zeng. ``New Code-Based Privacy-Preserving Cryptographic Constructions''. In ASIACRYPT 2019. LNCS, vol. 11922, pp. 25-55. Springer, 2019.
+	\begin{enumerate}
+		\item Nguyen, K., \textbf{Tang, H.}, Wang, H., Zeng, N.. ``New Code-Based Privacy-Preserving Cryptographic Constructions''. In ASIACRYPT 2019.
 	
-	San Ling, Khoa Nguyen, Duong Hieu Phan, \textbf{Hanh Tang}, and Huaxiong Wang. ``Zero-knowledge
-	proofs for committed symmetric boolean functions''. In PQCrypto 2021,
-	vol. 12841 of LNCS, pp. 339–359. Springer, 2021.
+		\item Ling, S., Nguyen, K., Phan, D.H., \textbf{Tang, H.}, Wang, H.. ``Zero-knowledge
+	proofs for committed symmetric boolean functions''. In PQCrypto 2021.
+	
+		\item Ling, S., Nguyen, K., Phan, D.H., \textbf{Tang, K.H.}, Wang, H., Xu, Y. ``Fully Dynamic Attribute-Based Signatures for Circuits from Codes''. In PKC 2024.
+	\end{enumerate}
 	
 	\section{Research Experience}
 	\textbf{In Nanyang Technological University}\\
-	\textit{PhD Student}
+	\textit{Postdoctoral Research Fellow}
 	\begin{itemize}
-		%\begin{comment}\item \textbf{New methods for designing practically efficient zero-knowledge arguments for Boolean circuits.} \begin{itemize}
-		%\item Designing a post-quantum zero-knowledge argument of knowledge for proving the knowledge of a secret input which, via a publicly known Boolean circuit, produces the known output.
-		%\item Achieving the computation complexity and communication cost which are competitive to the currently known constructions derived from multi-party computation.
-		%\end{itemize}\end{comment}
-		\item \textbf{New zero-knowledge argument systems and privacy-preserving constructions for code-based cryptography.}
+		\item \textbf{Designing Advanced Privacy-Preserving Signatures}
 		\begin{itemize}
-			\item Refining Stern's framework for constructing zero-knowledge proofs/arguments of knowledge.
-			\item Constructing code-based zero-knowledge arguments for inequalities of committed signed fractional numbers.
-			\item Constructing code-based zero-knowledge argument/proof for correct evaluations on committed symmetric Boolean functions and committed inputs.
-			\item Designing code-based fully-dynamic group and repudiable-and-claimable ring signatures.
-			\item Proposing new definition of fully dynamic attribute-based signatures and realizing its construction in code-based assumptions.
+			\item Designing efficient privacy-preserving signature schemes achieving anonymity, accountability and auditability simultaneously.
+		\end{itemize}
+		\item \textbf{Designing New Zero-Knowledge Protocols}
+		\begin{itemize}
+			\item Designing zero-knowledge protocols for correct execution of RAM programs, protecting their trace of computations with applications to zkVMs.
+			\item Applying zero-knowledge proofs for constructing privacy-preserving signatures.
 		\end{itemize}
 	\end{itemize}
 	
@@ -139,7 +128,7 @@ ItalicFont = Fontin-Italic.otf
 		\item \textbf{Programming Languages.} C++, Java, Python and Solidity.
 		\item \textbf{Codeforces.} TangHanh (\url{https://codeforces.com/profile/TangHanh})
 		\begin{itemize}
-			\item \textit{Contest rating:} $2114$ (at 3:23 PM, 18-January-2021).
+			\item \textit{Contest rating:} $2114$ (at 6:14 PM SGT, 27-February-2024).
 			\item \textit{Title:} Master.
 		\end{itemize}
 	\end{itemize}
@@ -155,6 +144,7 @@ ItalicFont = Fontin-Italic.otf
 		\item \textbf{2019.} TA for course of \textit{Discrete Mathematics} in Nanyang Technological University, Singapore.
 		\item \textbf{2020.} TA for courses of \textit{Dicrete Mathematics}, \textit{Probability} and \textit{Statistics} in Division of Mathematical Sciences, Nanyang Technological University, Singapore.
 		\item \textbf{2021.} TA for courses of \textit{Discrete Mathematics} and \textit{Groups \& Symmetries} in Division of Mathematical Sciences, Nanyang Technological University, Singapore.
+		\item \textbf{2023.} TA for course of \textit{Mathematics 1} in Division of Mathematical Sciences, Nanyang Technological University, Singapore.
 	\end{itemize}
 	
 	\section{Relevant experience}
@@ -203,7 +193,7 @@ ItalicFont = Fontin-Italic.otf
 	\end{tabular}
 	
 	\section{Interests and Activities}
-	Swimming, walking, cycling, skating, watching movies, and reading books.
+	Badminton, walking, cycling, watching movies, and reading books.
 	%\hfill
 	%%\hspace{1.5cm}
 	
